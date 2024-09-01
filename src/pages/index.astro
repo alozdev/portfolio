@@ -1,6 +1,6 @@
 ---
 
-const info = { name: "Alejandro Lozano", username: "alozdev" };
+const info = { name: "Alejandro Lozano", username: "alozdev", email: "contact@aloz.dev" };
 import Layout from "@/layouts/Layout.astro"
 
 import AboutMe from "@/components/AboutMe.astro"
@@ -20,7 +20,7 @@ import TitleSection from "@/components/TitleSection.astro"
 >
   <main class="px-4">
     <SectionContainer class="py-16 md:py-36">
-      <Hero name={info.name} username={info.username} email="contact@aloz.dev">
+      <Hero name={info.name} username={info.username} email={info.email}>
       </slot>
     </Hero>
     </SectionContainer>
