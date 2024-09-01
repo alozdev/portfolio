@@ -18,6 +18,7 @@ import TitleSection from "@/components/TitleSection.astro"
 <Layout
   title={`Portfolio de ${info.username} - Desarrollador y Programador Web con ${new Date().getFullYear() - info.since} años de experiencia`}
   description={`Contrata a ${info.username} para crear tu aplicación web. Desarrollador Web. Especializado en crear aplicaciones únicas.`}
+  email={info.email}
 >
   <main class="px-4">
     <SectionContainer class="py-16 md:py-36">
