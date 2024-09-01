@@ -11,10 +11,10 @@ import SocialPill from "@/components/SocialPill.astro"
     <img
       class="rounded-full shadow-lg size-16"
       src="/midudev.webp"
-      alt="Alejandro Lozano"
+      alt="{props.name}"
     />
     <a
-      href="https://linkedin.com/in/alozdev"
+      href="https://linkedin.com/in/{props.username}"
       target="_blank"
       rel="noopener"
       class="flex items-center transition md:justify-center md:hover:scale-105"
@@ -25,7 +25,7 @@ import SocialPill from "@/components/SocialPill.astro"
   <h1
     class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
   >
-    Hey, soy alozdev
+    Hey, soy {props.username}
   </h1>
   <p
     class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300"
@@ -40,7 +40,7 @@ import SocialPill from "@/components/SocialPill.astro"
       <MailIcon class="size-4" />
       Contáctame
     </SocialPill>
-    <SocialPill href="https://linkedin.com/in/alozdev">
+    <SocialPill href="https://linkedin.com/in/{props.username}">
       <LinkedInIcon class="size-4" />
       LinkedIn
     </SocialPill>
