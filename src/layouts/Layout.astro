@@ -1,7 +1,5 @@
 ---
 
-const { info } = Props.astro;
-
 import "@fontsource-variable/onest"
 
 import Header from "../components/Header.astro"
@@ -11,9 +9,10 @@ import { ViewTransitions } from "astro:transitions"
 interface Props {
   title: string
   description: string
+  email: string
 }
 
-const { description, title } = Astro.props
+const { description, title, email } = Astro.props
 ---
 
 <!doctype html>
@@ -35,9 +34,9 @@ const { description, title } = Astro.props
       dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
     >
     </div>
-    <Header email={info.email} />
+    <Header email={email} />
     <slot />
-    <Footer email={info.email} />
+    <Footer email={email} />
     <style is:global>
       :root {
         color-scheme: light dark;
