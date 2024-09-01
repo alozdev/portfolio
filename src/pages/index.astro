@@ -20,7 +20,7 @@ import TitleSection from "@/components/TitleSection.astro"
 >
   <main class="px-4">
     <SectionContainer class="py-16 md:py-36">
-      <Hero name={info.name} username={info.username} email={info.email}>
+      <Hero {...info}>
       </slot>
     </Hero>
     </SectionContainer>
