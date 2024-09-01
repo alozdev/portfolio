@@ -1,5 +1,6 @@
 ---
 
+const props = Astro.props;
 
 import ThemeToggle from "./ThemeToggle.astro"
 
@@ -22,7 +23,7 @@ const navItems = [
   {
     title: "Contacto",
     label: "contacto",
-    url: "df",
+    url: `mailto:${props.email}`,
   },
 ]
 ---
