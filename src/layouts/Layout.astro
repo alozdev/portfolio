@@ -1,5 +1,7 @@
 ---
 
+const { info } = Props.astro;
+
 import "@fontsource-variable/onest"
 
 import Header from "../components/Header.astro"
@@ -33,9 +35,9 @@ const { description, title } = Astro.props
       dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
     >
     </div>
-    <Header />
+    <Header email={info.email} />
     <slot />
-    <Footer />
+    <Footer email={info.email} />
     <style is:global>
       :root {
         color-scheme: light dark;
