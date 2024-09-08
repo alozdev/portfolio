@@ -9,6 +9,7 @@ import { ViewTransitions } from "astro:transitions"
 interface Props {
   title: string
   description: string
+  username: string
   email: string
 }
 
@@ -36,7 +37,7 @@ const { description, title, email } = Astro.props
     </div>
     <Header email={email} />
     <slot />
-    <Footer email={email} />
+    <Footer email={email} username={username} />
     <style is:global>
       :root {
         color-scheme: light dark;
